@@ -21,11 +21,17 @@ public class JpaRunner implements ApplicationRunner {
         Account account = new Account();
         account.setUsername("metamong");
         account.setPassword("hibernate");
-        account.setEmail("okgoogle@gmail.com");
-        account.setActive(false);
+
+        Study study = new Study();
+        study.setName("Spring Data JPA");
+
+        account.addStudy(study);
+//        study.setOwner(account);
+//        account.getStudies().add(study);
 
         Session session = entityManager.unwrap(Session.class);
         session.save(account);
+        session.save(study);
         // entityManager.persist(account);
     }
 }
