@@ -18,20 +18,22 @@ public class JpaRunner implements ApplicationRunner {
 
     @Override
     public void run(ApplicationArguments args) throws Exception {
-        Account account = new Account();
-        account.setUsername("metamong");
-        account.setPassword("hibernate");
-
-        Study study = new Study();
-        study.setName("Spring Data JPA");
-
-        account.addStudy(study);
-//        study.setOwner(account);
-//        account.getStudies().add(study);
-
         Session session = entityManager.unwrap(Session.class);
-        session.save(account);
-        session.save(study);
-        // entityManager.persist(account);
+
+//        Post post = new Post();
+//        post.setTitle("Spring Data JPA ..");
+//
+//        Comment comment = new Comment();
+//        comment.setComment("언제 다보나 ..");
+//        post.addComment(comment);
+//
+//        Comment comment1 = new Comment();
+//        comment.setComment("금방 보겠지..?");
+//        post.addComment(comment1);
+
+//        session.save(post);
+
+        Post post = session.get(Post.class, 1l);
+        session.delete(post);
     }
 }
