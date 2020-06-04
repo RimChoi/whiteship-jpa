@@ -19,3 +19,4 @@
 > 18강. JPA 데이터 Common 2. 인터페이스 정의하기<br>
 > 19강. JPA 데이터 Common 3. Null 처리<br>
 > 20강. JPA 데이터 Common 4. 쿼리 만들기<br>
+> 21강. JPA 데이터 Common 4. 쿼리 만들기 실습<br>
