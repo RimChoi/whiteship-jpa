@@ -22,13 +22,15 @@ public class JpaRunner implements ApplicationRunner {
     @Autowired
     PostRepository postRepository;
 
-    @Autowired
-    Metamong metamong;
 
     @Override
     public void run(ApplicationArguments args) throws Exception {
-        postRepository.findAll().forEach(System.out::println);
-        System.out.println("=================");
-        System.out.println(metamong.getName());
+        Post post = new Post();
+        post.setTitle("Hello");
+
+        Comment comment = new Comment();
+        comment.setComment("Hello. Stranger");
+
+        postRepository.save(post);
     }
 }
