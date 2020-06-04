@@ -9,6 +9,8 @@
 > 11강. JPA 프로그래밍 5. 엔티티 상태와 Cascade<br>
 > 12강. JPA 프로그래밍 6. Fetch<br>
 > 13강. JPA 프로그래밍 7. Query<br>
+> 14강. 스프링 데이터 JPA 원리<br>
+
 
 
 

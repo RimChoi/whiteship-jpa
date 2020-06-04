@@ -1,6 +1,7 @@
 package com.metamong.demospringdata;
 
 import org.hibernate.Session;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.stereotype.Component;
@@ -18,28 +19,16 @@ import java.util.List;
 @Transactional
 public class JpaRunner implements ApplicationRunner {
 
-    @PersistenceContext
-    EntityManager entityManager;
+    @Autowired
+    PostRepository postRepository;
+
+    @Autowired
+    Metamong metamong;
 
     @Override
     public void run(ApplicationArguments args) throws Exception {
-        // JPQL, HQL
-//        TypedQuery<Post> query = entityManager.createQuery("SELECT p FROM Post as p", Post.class);
-//        List<Post> posts = query.getResultList();
-//        posts.forEach(System.out::println);
-
-        // Creteria
-//        CriteriaBuilder builder = entityManager.getCriteriaBuilder();
-//        CriteriaQuery<Post> query = builder.createQuery(Post.class);
-//        Root<Post> root = query.from(Post.class);
-//        query.select(root);
-//
-//        List<Post> posts = entityManager.createQuery(query).getResultList();
-//        posts.forEach(System.out::println);
-
-        // Native Query
-        List<Post> posts = entityManager.createNativeQuery("SELECT * FROM Post", Post.class).getResultList();
-        posts.forEach(System.out::println);
-
+        postRepository.findAll().forEach(System.out::println);
+        System.out.println("=================");
+        System.out.println(metamong.getName());
     }
 }
