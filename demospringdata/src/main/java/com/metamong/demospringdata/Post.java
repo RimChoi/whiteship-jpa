@@ -11,7 +11,7 @@ public class Post {
 
     private String title;
 
-    @OneToMany(mappedBy = "post", cascade = {CascadeType.ALL}, fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "post", cascade = {CascadeType.ALL}, fetch = FetchType.LAZY)
     private Set<Comment> comments = new HashSet<>();
 
     public Long getId() {
@@ -46,5 +46,13 @@ public class Post {
     public void removeComment(Comment comment) {
         this.getComments().remove(comment);
         comment.setPost(null);
+    }
+
+    @Override
+    public String toString() {
+        return "Post{" +
+                "id=" + id +
+                ", title='" + title + '\'' +
+                '}';
     }
 }
