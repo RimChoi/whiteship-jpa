@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @SpringBootApplication
-//@EnableJpaRepositories(repositoryImplementationPostfix = "Default")
+@EnableJpaRepositories(repositoryBaseClass = MyRepositoryImpl.class)
 public class DemojpaApplication {
 
     public static void main(String[] args) {
