@@ -16,4 +16,4 @@
 ## 2부. 스프링 데이터 JPA 활용
 ### 해당 강좌
 > 17강. JPA 데이터 Common 1. Repository<br>
-
+> 18강. JPA 데이터 Common 2. 인터페이스 정의하기<br>
