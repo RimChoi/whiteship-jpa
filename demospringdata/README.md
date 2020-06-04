@@ -20,3 +20,4 @@
 > 19강. JPA 데이터 Common 3. Null 처리<br>
 > 20강. JPA 데이터 Common 4. 쿼리 만들기<br>
 > 21강. JPA 데이터 Common 4. 쿼리 만들기 실습<br>
+> 22강. JPA 데이터 Common 6. 비동기 쿼리 메소드<br>
