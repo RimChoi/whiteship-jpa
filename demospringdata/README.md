@@ -7,7 +7,7 @@
 > 9강. JPA 프로그래밍 3. Value 타입 매핑<br>
 > 10강. JPA 프로그래밍 4. 관계 타입 매핑<br>
 > 11강. JPA 프로그래밍 5. 엔티티 상태와 Cascade<br>
-
+> 12강. JPA 프로그래밍 6. Fetch<br>
 
 
 

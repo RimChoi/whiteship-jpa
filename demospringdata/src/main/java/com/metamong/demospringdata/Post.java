@@ -11,7 +11,7 @@ public class Post {
 
     private String title;
 
-    @OneToMany(mappedBy = "post", cascade = {CascadeType.PERSIST, CascadeType.REMOVE})
+    @OneToMany(mappedBy = "post", cascade = {CascadeType.ALL}, fetch = FetchType.EAGER)
     private Set<Comment> comments = new HashSet<>();
 
     public Long getId() {
