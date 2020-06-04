@@ -23,3 +23,4 @@
 > 22강. JPA 데이터 Common 6. 비동기 쿼리 메소드<br>
 > 23강. JPA 데이터 Common 7. 커스텀 리포지토리 만들기<br>
 > 24강. JPA 데이터 Common 8. 기본 리포지토리 커스터마이징<br>
+> 25강. JPA 데이터 Common 9. 도메인 이벤트<br>
