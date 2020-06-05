@@ -24,3 +24,5 @@
 > 23강. JPA 데이터 Common 7. 커스텀 리포지토리 만들기<br>
 > 24강. JPA 데이터 Common 8. 기본 리포지토리 커스터마이징<br>
 > 25강. JPA 데이터 Common 9. 도메인 이벤트<br>
+> 26강. JPA 데이터 Common 10. queryDSL 연동<br>
+> 27강. queryDSL 연동 보강
