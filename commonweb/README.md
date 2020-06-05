@@ -5,3 +5,4 @@
 
 > 29강. 스프링 데이터 Common 12. 웹기능 2부 DomainClassConverter<br>
 > 30강. 스프링 데이터 Common 13. 웹기능 3부 Pageable과 Sort<br>
+> 31강. 스프링 데이터 Common 14. 웹기능 4부 Hateoas<br>
