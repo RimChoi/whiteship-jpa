@@ -8,3 +8,4 @@
 > 31강. 스프링 데이터 Common 14. 웹기능 4부 Hateoas<br>
 > 32강. 스프링 데이터 Common 15. 정리<br>
 > 33강. 스프링 데이터 JPA 1. JpaRepository<br>
+> 34강. 스프링 데이터 JPA 2. JpaRepository.save() 메소드<br>
