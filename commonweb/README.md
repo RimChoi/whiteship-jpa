@@ -9,3 +9,4 @@
 > 32강. 스프링 데이터 Common 15. 정리<br>
 > 33강. 스프링 데이터 JPA 1. JpaRepository<br>
 > 34강. 스프링 데이터 JPA 2. JpaRepository.save() 메소드<br>
+> 35강. 스프링 데이터 JPA 3. JPA 쿼리 메소드<br>
