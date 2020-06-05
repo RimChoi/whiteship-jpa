@@ -11,3 +11,4 @@
 > 34강. 스프링 데이터 JPA 2. JpaRepository.save() 메소드<br>
 > 35강. 스프링 데이터 JPA 3. JPA 쿼리 메소드<br>
 > 36강. 스프링 데이터 JPA 4. Sort<br>
+> 37강. 스프링 데이터 JPA 5. Named Parameter와 SpEL<br>
