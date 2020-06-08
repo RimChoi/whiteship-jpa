@@ -15,3 +15,4 @@
 > 38강. 스프링 데이터 JPA 6. Update 쿼리<br>
 > 39강. 스프링 데이터 JPA 7. EntityGraph<br>
 > 40강. 스프링 데이터 JPA 8. Projection<br>
+> 41강. 스프링 데이터 JPA 9. Specification<br>
