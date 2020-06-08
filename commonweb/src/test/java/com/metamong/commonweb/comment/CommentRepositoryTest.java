@@ -21,22 +21,41 @@ public class CommentRepositoryTest {
     @Autowired
     PostRepository postRepository;
 
+    Post savedPost = null;
+
     @Test
     public void getComment() {
-        Post post = new Post();
-        post.setTitle("jpa");
-        Post savedPost = postRepository.save(post);
-
-        Comment comment = new Comment();
-        comment.setComment("comment");
-        comment.setPost(savedPost);
-        commentRepository.save(comment);
-
+        createMockComment();
 
         commentRepository.getById(1l);
         System.out.println("================================");
 
         Optional<Comment> byId = commentRepository.findById(1l);
 
+    }
+
+    private Comment createMockComment() {
+        Post post = new Post();
+        post.setTitle("jpa");
+        savedPost = postRepository.save(post);
+
+        Comment comment = new Comment();
+        comment.setComment("comment");
+        comment.setUp(10);
+        comment.setDown(1);
+        comment.setPost(savedPost);
+
+        return commentRepository.save(comment);
+    }
+
+    @Test
+    public void getComment2() {
+        Comment comment = this.createMockComment();
+
+        commentRepository.findByPost_Id(savedPost.getId(), CommentOnly.class).forEach(c -> {
+            System.out.println("================");
+//            System.out.println(c.getVotes());
+            System.out.println(c.getComment());
+        });
     }
 }
