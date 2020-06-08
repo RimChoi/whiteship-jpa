@@ -7,6 +7,8 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
+import org.springframework.data.domain.Example;
+import org.springframework.data.domain.ExampleMatcher;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.test.context.junit4.SpringRunner;
 
@@ -65,5 +67,15 @@ public class CommentRepositoryTest {
     @Test
     public void specs() {
         commentRepository.findAll(CommentSpecs.isBest().or(isGood()), PageRequest.of(0, 10) );
+    }
+
+    @Test
+    public void qbe() {
+        Comment probe = new Comment();
+        probe.setBest(true);
+
+        ExampleMatcher matcher = ExampleMatcher.matchingAny().withIgnorePaths("up", "down");
+        Example<Comment> example = Example.of(probe, matcher);
+        commentRepository.findAll(example);
     }
 }
