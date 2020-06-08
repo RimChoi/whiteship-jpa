@@ -19,3 +19,4 @@
 > 42강. 스프링 데이터 JPA 10. Query By Example<br>
 > 43강. 스프링 데이터 JPA 11. 트랜잭션<br>
 > 44강. 스프링 데이터 JPA 12. Auditing<br>
+> 45강. 스프링 데이터 JPA 마무리<br>
