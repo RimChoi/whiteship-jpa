@@ -15,5 +15,11 @@
 
 ## 2부. 스프링 데이터 JPA 활용
 ### 해당 강좌
-> 17강. JPA 데이터 Common 1. Repository<br>
+> 17강. 스프링 데이터 Common 1. Repository<br>
+> 18강. 스프링 데이터 Common 2. 인터페이스 정의하기<br>
+> 19강. 스프링 데이터 Common 3. Null 처리<br>
+> 20강. 스프링 데이터 Common 4. 쿼리 만들기<br>
+> 21강. 스프링 데이터 Common 4. 쿼리 만들기 실습<br>
+> 22강. 스프링 데이터 Common 6. 비동기 쿼리 메소드<br>
+
 
