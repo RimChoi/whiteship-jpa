@@ -4,6 +4,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
+import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.jpa.domain.JpaSort;
 import org.springframework.test.context.junit4.SpringRunner;
@@ -11,11 +12,13 @@ import org.springframework.test.context.junit4.SpringRunner;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import java.util.List;
+import java.util.Optional;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
 @RunWith(SpringRunner.class)
 @DataJpaTest
+//@SpringBootTest
 public class PostRepositoryTest {
 
     @Autowired
@@ -70,10 +73,31 @@ public class PostRepositoryTest {
 
     }
 
-    private void savePost() {
+    @Test
+    public void updateTitle() {
+        Post spring = savePost();
+        String hibernate = "hibernate";
+
+
+//        int update = postRepository.updateTitle(hibernate, spring.getId());
+//        assertThat(update).isEqualTo(1);
+//
+//        Optional<Post> byId = postRepository.findById(spring.getId());
+//        Post post = byId.get();
+//        assertThat(post.getTitle()).isEqualTo(hibernate);
+
+
+        // hibernate 가 find 하기전에 DB Sync 를 맞춘다.
+        spring.setTitle(hibernate);
+        List<Post> all = postRepository.findAll();
+        assertThat(all.get(0).getTitle()).isEqualTo("hibernate");
+    }
+
+    private Post savePost() {
         Post post = new Post();
         post.setTitle("Spring");
-        postRepository.save(post);
+
+        return postRepository.save(post);
     }
 
 }
